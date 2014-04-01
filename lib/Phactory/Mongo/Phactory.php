@@ -139,7 +139,7 @@ class Phactory {
             throw new \Exception("\$query must be an associative array of 'field => value' pairs");
         }
 
-        $collection = new Collection($collection_name, true, $this);
+        $collection = new Collection($collection_name, false, $this);
 				
         return $collection->findOne($query);
     }
@@ -156,7 +156,7 @@ class Phactory {
             throw new \Exception("\$query must be an associative array of 'field => value' pairs");
         }
 
-        $collection = new Collection($collection_name, true, $this);
+        $collection = new Collection($collection_name, false, $this);
 				
         return $collection->find($query);
     }
