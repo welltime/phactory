@@ -103,7 +103,7 @@ class Blueprint {
         $n = $this->_sequence->next();
         array_walk_recursive($data,function(&$value) use ($n) {
             if(is_string($value) && false !== strpos($value, '$')) {
-                $value = eval('return "'. stripslashes($value) . '";');
+                $value = eval("return '". stripslashes($value) . "';");
             }
         });
     }
